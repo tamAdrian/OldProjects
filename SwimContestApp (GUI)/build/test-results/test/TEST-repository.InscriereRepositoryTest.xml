@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="repository.InscriereRepositoryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-03-20T06:39:42" hostname="Adrian-MSI" time="7.644">
+  <properties/>
+  <testcase name="delete" classname="repository.InscriereRepositoryTest" time="1.912"/>
+  <testcase name="findAll" classname="repository.InscriereRepositoryTest" time="0.734"/>
+  <testcase name="findOne" classname="repository.InscriereRepositoryTest" time="0.754"/>
+  <testcase name="update" classname="repository.InscriereRepositoryTest" time="0.723"/>
+  <testcase name="save" classname="repository.InscriereRepositoryTest" time="1.154"/>
+  <testcase name="size" classname="repository.InscriereRepositoryTest" time="1.507"/>
+  <testcase name="findByProbaId" classname="repository.InscriereRepositoryTest" time="0.86"/>
+  <system-out><![CDATA[2019-03-20 08:39:42,615 Test worker DEBUG Initializing configuration XmlConfiguration[location=D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\build\resources\main\log4j2.xml]
+2019-03-20 08:39:42,615 Test worker DEBUG Installed 1 script engine
+2019-03-20 08:39:42,787 Test worker DEBUG Oracle Nashorn version: 1.8.0_201, language: ECMAScript, threading: Not Thread Safe, compile: true, names: [nashorn, Nashorn, js, JS, JavaScript, javascript, ECMAScript, ecmascript], factory class: jdk.nashorn.api.scripting.NashornScriptEngineFactory
+2019-03-20 08:39:42,787 Test worker DEBUG PluginManager 'Core' found 116 plugins
+2019-03-20 08:39:42,787 Test worker DEBUG PluginManager 'Level' found 0 plugins
+2019-03-20 08:39:42,787 Test worker DEBUG PluginManager 'Lookup' found 13 plugins
+2019-03-20 08:39:42,787 Test worker DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2019-03-20 08:39:42,787 Test worker TRACE TypeConverterRegistry initializing.
+2019-03-20 08:39:42,787 Test worker DEBUG PluginManager 'TypeConverter' found 26 plugins
+2019-03-20 08:39:42,803 Test worker DEBUG PatternLayout$Builder(pattern="%d{DATE} %-5level %class{36} %L %M - %msg%n", PatternSelector=null, Configuration(D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\build\resources\main\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2019-03-20 08:39:42,803 Test worker DEBUG PluginManager 'Converter' found 42 plugins
+2019-03-20 08:39:42,818 Test worker DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2019-03-20 08:39:42,818 Test worker DEBUG ConsoleAppender$Builder(target="SYSTEM_OUT", follow="null", direct="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d{DATE} %-5level %class{36} %L %M - %msg%n), name="Console", Configuration(D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\build\resources\main\log4j2.xml), Filter=null)
+2019-03-20 08:39:42,818 Test worker DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
+2019-03-20 08:39:42,818 Test worker DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2019-03-20 08:39:42,818 Test worker DEBUG PatternLayout$Builder(pattern="%d{DATE} %-5level %class{36} %L %M - %msg%n", PatternSelector=null, Configuration(D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\build\resources\main\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2019-03-20 08:39:42,818 Test worker DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
+2019-03-20 08:39:42,818 Test worker DEBUG FileAppender$Builder(fileName="target/test.log", append="true", locking="null", advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d{DATE} %-5level %class{36} %L %M - %msg%n), name="log", Configuration(D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\build\resources\main\log4j2.xml), Filter=null)
+2019-03-20 08:39:42,818 Test worker DEBUG Starting FileManager target/test.log
+2019-03-20 08:39:42,818 Test worker DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2019-03-20 08:39:42,818 Test worker DEBUG createAppenders(={Console, log})
+2019-03-20 08:39:42,818 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2019-03-20 08:39:42,834 Test worker DEBUG createAppenderRef(ref="log", level="null", Filter=null)
+2019-03-20 08:39:42,834 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2019-03-20 08:39:42,834 Test worker DEBUG createAppenderRef(ref="Console", level="null", Filter=null)
+2019-03-20 08:39:42,834 Test worker DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2019-03-20 08:39:42,834 Test worker DEBUG createLogger(additivity="null", level="TRACE", includeLocation="null", ={log, Console}, ={}, Configuration(D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\build\resources\main\log4j2.xml), Filter=null)
+2019-03-20 08:39:42,834 Test worker DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2019-03-20 08:39:42,834 Test worker DEBUG createLoggers(={root})
+2019-03-20 08:39:42,834 Test worker DEBUG Configuration XmlConfiguration[location=D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\build\resources\main\log4j2.xml] initialized
+2019-03-20 08:39:42,834 Test worker DEBUG Starting configuration XmlConfiguration[location=D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\build\resources\main\log4j2.xml]
+2019-03-20 08:39:42,834 Test worker DEBUG Started configuration XmlConfiguration[location=D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\build\resources\main\log4j2.xml] OK.
+2019-03-20 08:39:42,834 Test worker TRACE Stopping org.apache.logging.log4j.core.config.DefaultConfiguration@1068db5a...
+2019-03-20 08:39:42,834 Test worker TRACE DefaultConfiguration notified 1 ReliabilityStrategies that config will be stopped.
+2019-03-20 08:39:42,834 Test worker TRACE DefaultConfiguration stopping root LoggerConfig.
+2019-03-20 08:39:42,834 Test worker TRACE DefaultConfiguration notifying ReliabilityStrategies that appenders will be stopped.
+2019-03-20 08:39:42,834 Test worker TRACE DefaultConfiguration stopping remaining Appenders.
+2019-03-20 08:39:42,834 Test worker DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2019-03-20 08:39:42,834 Test worker DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2019-03-20 08:39:42,834 Test worker DEBUG Appender DefaultConsole-1 stopped with status true
+2019-03-20 08:39:42,834 Test worker TRACE DefaultConfiguration stopped 1 remaining Appenders.
+2019-03-20 08:39:42,834 Test worker TRACE DefaultConfiguration cleaning Appenders from 1 LoggerConfigs.
+2019-03-20 08:39:42,834 Test worker DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@1068db5a OK
+2019-03-20 08:39:42,865 Test worker TRACE Reregistering MBeans after reconfigure. Selector=org.apache.logging.log4j.core.selector.ClassLoaderContextSelector@6fbf80f0
+2019-03-20 08:39:42,865 Test worker TRACE Reregistering context (1/1): '73d16e93' org.apache.logging.log4j.core.LoggerContext@13e349f
+2019-03-20 08:39:42,865 Test worker TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=73d16e93'
+2019-03-20 08:39:42,865 Test worker TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=73d16e93,component=StatusLogger'
+2019-03-20 08:39:42,865 Test worker TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=73d16e93,component=ContextSelector'
+2019-03-20 08:39:42,865 Test worker TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=73d16e93,component=Loggers,name=*'
+2019-03-20 08:39:42,865 Test worker TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=73d16e93,component=Appenders,name=*'
+2019-03-20 08:39:42,865 Test worker TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=73d16e93,component=AsyncAppenders,name=*'
+2019-03-20 08:39:42,865 Test worker TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=73d16e93,component=AsyncLoggerRingBuffer'
+2019-03-20 08:39:42,865 Test worker TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=73d16e93,component=Loggers,name=*,subtype=RingBuffer'
+2019-03-20 08:39:42,865 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=73d16e93
+2019-03-20 08:39:42,865 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=73d16e93,component=StatusLogger
+2019-03-20 08:39:42,865 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=73d16e93,component=ContextSelector
+2019-03-20 08:39:42,865 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=73d16e93,component=Loggers,name=
+2019-03-20 08:39:42,865 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=73d16e93,component=Appenders,name=Console
+2019-03-20 08:39:42,881 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=73d16e93,component=Appenders,name=log
+2019-03-20 08:39:42,881 Test worker TRACE Using default SystemClock for timestamps.
+2019-03-20 08:39:42,881 Test worker TRACE Using DummyNanoClock for nanosecond timestamps.
+2019-03-20 08:39:42,881 Test worker DEBUG Reconfiguration complete for context[name=73d16e93] at URI D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\build\resources\main\log4j2.xml (org.apache.logging.log4j.core.LoggerContext@13e349f) with optional ClassLoader: null
+2019-03-20 08:39:42,881 Test worker DEBUG Shutdown hook enabled. Registering a new one.
+2019-03-20 08:39:42,881 Test worker DEBUG LoggerContext[name=73d16e93, org.apache.logging.log4j.core.LoggerContext@13e349f] started OK.
+20 Mar 2019 08:39:42,881 INFO  repository.InscriereRepository 22 <init> - Initializing InscriereRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:42,881 INFO  repository.ParticipantRepository 22 <init> - Initializing ParticipantRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:42,881 INFO  repository.ProbaRepository 24 <init> - Initializing ProbaRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:42,881 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=1, nume='Alex', varsta='22'} 
+20 Mar 2019 08:39:42,881 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:42,881 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:42,881 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:42,881 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:42,881 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:42,881 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:42,988 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@121ec5b)
+20 Mar 2019 08:39:43,144 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:43,144 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=2, nume='Mihai', varsta='34'} 
+20 Mar 2019 08:39:43,144 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:43,144 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@121ec5b)
+20 Mar 2019 08:39:43,253 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:43,253 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=1, distanta=dist50m, stil=liber} 
+20 Mar 2019 08:39:43,253 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:43,253 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:43,253 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:43,253 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:43,253 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:43,253 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:43,269 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@3cac938a)
+20 Mar 2019 08:39:43,380 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:43,380 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=2, distanta=dist800m, stil=mixt} 
+20 Mar 2019 08:39:43,380 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:43,380 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@3cac938a)
+20 Mar 2019 08:39:43,505 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:43,505 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=1} 
+20 Mar 2019 08:39:43,505 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:43,505 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:43,505 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:43,505 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:43,505 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:43,505 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:43,520 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@c4c5d75)
+20 Mar 2019 08:39:43,630 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:43,630 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=2} 
+20 Mar 2019 08:39:43,645 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:43,645 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@c4c5d75)
+20 Mar 2019 08:39:43,755 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:43,755 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=2, idProba=2} 
+20 Mar 2019 08:39:43,755 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:43,755 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@c4c5d75)
+20 Mar 2019 08:39:43,864 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:43,864 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=1
+20 Mar 2019 08:39:43,880 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:43,880 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@c4c5d75)
+20 Mar 2019 08:39:43,991 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:43,991 TRACE repository.InscriereRepository 29 size - Enter
+20 Mar 2019 08:39:44,006 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,006 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@c4c5d75)
+20 Mar 2019 08:39:44,006 TRACE repository.InscriereRepository 35 size - Exit with(2)
+20 Mar 2019 08:39:44,006 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=1
+20 Mar 2019 08:39:44,006 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,006 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@c4c5d75)
+20 Mar 2019 08:39:44,006 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:44,006 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=2
+20 Mar 2019 08:39:44,006 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,006 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@c4c5d75)
+20 Mar 2019 08:39:44,227 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:44,227 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 2=2
+20 Mar 2019 08:39:44,227 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,227 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@c4c5d75)
+20 Mar 2019 08:39:44,348 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:44,348 INFO  repository.InscriereRepository 22 <init> - Initializing InscriereRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:44,348 INFO  repository.ParticipantRepository 22 <init> - Initializing ParticipantRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:44,348 INFO  repository.ProbaRepository 24 <init> - Initializing ProbaRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:44,348 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=1, nume='Alex', varsta='22'} 
+20 Mar 2019 08:39:44,348 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,348 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:44,348 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:44,348 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:44,348 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:44,348 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:44,364 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@15879225)
+20 Mar 2019 08:39:44,364 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:44,364 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:44,364 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=2, nume='Mihai', varsta='34'} 
+20 Mar 2019 08:39:44,364 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,364 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@15879225)
+20 Mar 2019 08:39:44,364 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:44,364 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:44,364 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=1, distanta=dist50m, stil=liber} 
+20 Mar 2019 08:39:44,364 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,364 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:44,364 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:44,364 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:44,364 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:44,364 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:44,364 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@55c7b058)
+20 Mar 2019 08:39:44,364 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:44,379 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:44,379 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=2, distanta=dist800m, stil=mixt} 
+20 Mar 2019 08:39:44,379 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,379 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@55c7b058)
+20 Mar 2019 08:39:44,379 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:44,379 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:44,379 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=1} 
+20 Mar 2019 08:39:44,379 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,379 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:44,379 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:44,379 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:44,379 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:44,379 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:44,379 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@5861f88b)
+20 Mar 2019 08:39:44,504 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:44,504 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=2} 
+20 Mar 2019 08:39:44,504 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,504 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@5861f88b)
+20 Mar 2019 08:39:44,615 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:44,615 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=2, idProba=2} 
+20 Mar 2019 08:39:44,615 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,615 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@5861f88b)
+20 Mar 2019 08:39:44,725 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:44,725 TRACE repository.InscriereRepository 134 findAll - Enter
+20 Mar 2019 08:39:44,725 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,740 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@5861f88b)
+20 Mar 2019 08:39:44,740 TRACE repository.InscriereRepository 152 findAll - Exit with([Inscriere{idParticipant=1, idProba=1}, Inscriere{idParticipant=1, idProba=2}, Inscriere{idParticipant=2, idProba=2}])
+20 Mar 2019 08:39:44,740 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=1
+20 Mar 2019 08:39:44,740 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,740 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@5861f88b)
+20 Mar 2019 08:39:44,850 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:44,850 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=2
+20 Mar 2019 08:39:44,850 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,850 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@5861f88b)
+20 Mar 2019 08:39:44,959 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:44,959 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 2=2
+20 Mar 2019 08:39:44,959 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:44,959 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@5861f88b)
+20 Mar 2019 08:39:45,084 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:45,084 INFO  repository.InscriereRepository 22 <init> - Initializing InscriereRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:45,084 INFO  repository.ParticipantRepository 22 <init> - Initializing ParticipantRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:45,084 INFO  repository.ProbaRepository 24 <init> - Initializing ProbaRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:45,084 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=1, nume='Alex', varsta='22'} 
+20 Mar 2019 08:39:45,084 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,084 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:45,084 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:45,084 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:45,084 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:45,084 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:45,100 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@1056c0fc)
+20 Mar 2019 08:39:45,100 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:45,100 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:45,100 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=2, nume='Mihai', varsta='34'} 
+20 Mar 2019 08:39:45,100 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,100 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@1056c0fc)
+20 Mar 2019 08:39:45,115 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:45,115 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:45,115 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=1, distanta=dist50m, stil=liber} 
+20 Mar 2019 08:39:45,115 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,115 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:45,115 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:45,115 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:45,115 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:45,115 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:45,115 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@787bf7de)
+20 Mar 2019 08:39:45,115 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:45,115 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:45,115 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=2, distanta=dist800m, stil=mixt} 
+20 Mar 2019 08:39:45,115 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,115 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@787bf7de)
+20 Mar 2019 08:39:45,115 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:45,115 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:45,115 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=1} 
+20 Mar 2019 08:39:45,115 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,115 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:45,115 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:45,131 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:45,131 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:45,131 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:45,131 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@2f89fdfa)
+20 Mar 2019 08:39:45,240 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:45,240 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=2} 
+20 Mar 2019 08:39:45,240 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,240 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@2f89fdfa)
+20 Mar 2019 08:39:45,365 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:45,365 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=2, idProba=2} 
+20 Mar 2019 08:39:45,365 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,365 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@2f89fdfa)
+20 Mar 2019 08:39:45,492 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:45,493 TRACE repository.InscriereRepository 107 findOne - Enter finding 'inscriere' with id 1=1 
+20 Mar 2019 08:39:45,493 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,493 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@2f89fdfa)
+20 Mar 2019 08:39:45,494 TRACE repository.InscriereRepository 118 findOne - Exit with(Inscriere{idParticipant=1, idProba=1})
+20 Mar 2019 08:39:45,494 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=1
+20 Mar 2019 08:39:45,494 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,494 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@2f89fdfa)
+20 Mar 2019 08:39:45,597 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:45,597 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=2
+20 Mar 2019 08:39:45,597 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,597 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@2f89fdfa)
+20 Mar 2019 08:39:45,706 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:45,706 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 2=2
+20 Mar 2019 08:39:45,706 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,706 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@2f89fdfa)
+20 Mar 2019 08:39:45,831 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:45,831 INFO  repository.InscriereRepository 22 <init> - Initializing InscriereRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:45,831 INFO  repository.ParticipantRepository 22 <init> - Initializing ParticipantRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:45,831 INFO  repository.ProbaRepository 24 <init> - Initializing ProbaRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:45,831 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=1, nume='Alex', varsta='22'} 
+20 Mar 2019 08:39:45,831 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,831 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:45,831 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:45,831 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:45,831 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:45,831 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:45,848 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@5f022e66)
+20 Mar 2019 08:39:45,848 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:45,848 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:45,848 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=2, nume='Mihai', varsta='34'} 
+20 Mar 2019 08:39:45,848 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,848 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@5f022e66)
+20 Mar 2019 08:39:45,848 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:45,848 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:45,848 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=1, distanta=dist50m, stil=liber} 
+20 Mar 2019 08:39:45,848 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,848 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:45,848 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:45,848 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:45,848 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:45,848 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:45,848 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7860f75f)
+20 Mar 2019 08:39:45,863 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:45,863 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:45,863 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=2, distanta=dist800m, stil=mixt} 
+20 Mar 2019 08:39:45,863 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,863 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7860f75f)
+20 Mar 2019 08:39:45,863 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:45,863 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:45,863 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=1} 
+20 Mar 2019 08:39:45,863 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,863 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:45,863 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:45,863 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:45,863 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:45,863 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:45,863 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@1866b384)
+20 Mar 2019 08:39:45,973 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:45,973 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=2} 
+20 Mar 2019 08:39:45,973 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:45,973 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@1866b384)
+20 Mar 2019 08:39:46,098 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:46,098 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=2, idProba=2} 
+20 Mar 2019 08:39:46,098 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,098 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@1866b384)
+20 Mar 2019 08:39:46,191 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:46,191 TRACE repository.InscriereRepository 86 update - Enter updating 'inscriere' with Inscriere{idParticipant=2, idProba=2}
+20 Mar 2019 08:39:46,191 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,191 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@1866b384)
+20 Mar 2019 08:39:46,207 ERROR repository.InscriereRepository 98 update - org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (near ",": syntax error)
+Error DB  org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (near ",": syntax error)
+20 Mar 2019 08:39:46,207 TRACE repository.InscriereRepository 102 update - Exit
+20 Mar 2019 08:39:46,207 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 2=2
+20 Mar 2019 08:39:46,207 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,207 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@1866b384)
+20 Mar 2019 08:39:46,316 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:46,316 TRACE repository.InscriereRepository 29 size - Enter
+20 Mar 2019 08:39:46,316 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,316 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@1866b384)
+20 Mar 2019 08:39:46,316 TRACE repository.InscriereRepository 35 size - Exit with(2)
+20 Mar 2019 08:39:46,316 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=1
+20 Mar 2019 08:39:46,316 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,316 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@1866b384)
+20 Mar 2019 08:39:46,426 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:46,426 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=2
+20 Mar 2019 08:39:46,426 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,426 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@1866b384)
+20 Mar 2019 08:39:46,551 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:46,551 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 2=2
+20 Mar 2019 08:39:46,551 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,551 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@1866b384)
+20 Mar 2019 08:39:46,551 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:46,551 INFO  repository.InscriereRepository 22 <init> - Initializing InscriereRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:46,551 INFO  repository.ParticipantRepository 22 <init> - Initializing ParticipantRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:46,551 INFO  repository.ProbaRepository 24 <init> - Initializing ProbaRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:46,551 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=1, nume='Alex', varsta='22'} 
+20 Mar 2019 08:39:46,551 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,551 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:46,551 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:46,551 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:46,551 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:46,551 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:46,566 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@57bc77c)
+20 Mar 2019 08:39:46,566 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:46,566 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:46,566 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=2, nume='Mihai', varsta='34'} 
+20 Mar 2019 08:39:46,566 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,566 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@57bc77c)
+20 Mar 2019 08:39:46,566 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:46,566 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:46,566 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=1, distanta=dist50m, stil=liber} 
+20 Mar 2019 08:39:46,582 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,582 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:46,582 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:46,582 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:46,582 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:46,582 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:46,582 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7ade1283)
+20 Mar 2019 08:39:46,582 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:46,582 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:46,582 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=2, distanta=dist800m, stil=mixt} 
+20 Mar 2019 08:39:46,582 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,582 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7ade1283)
+20 Mar 2019 08:39:46,582 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:46,582 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:46,582 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=1} 
+20 Mar 2019 08:39:46,582 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,582 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:46,582 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:46,582 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:46,582 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:46,582 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:46,582 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@570974cf)
+20 Mar 2019 08:39:46,707 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:46,707 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=2} 
+20 Mar 2019 08:39:46,707 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,707 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@570974cf)
+20 Mar 2019 08:39:46,813 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:46,813 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=2, idProba=2} 
+20 Mar 2019 08:39:46,813 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:46,813 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@570974cf)
+20 Mar 2019 08:39:47,049 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:47,049 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=2, idProba=1} 
+20 Mar 2019 08:39:47,049 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,049 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@570974cf)
+20 Mar 2019 08:39:47,174 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:47,174 TRACE repository.InscriereRepository 29 size - Enter
+20 Mar 2019 08:39:47,174 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,174 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@570974cf)
+20 Mar 2019 08:39:47,174 TRACE repository.InscriereRepository 35 size - Exit with(4)
+20 Mar 2019 08:39:47,174 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 2=1
+20 Mar 2019 08:39:47,174 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,174 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@570974cf)
+20 Mar 2019 08:39:47,299 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:47,299 TRACE repository.InscriereRepository 29 size - Enter
+20 Mar 2019 08:39:47,299 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,299 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@570974cf)
+20 Mar 2019 08:39:47,299 TRACE repository.InscriereRepository 35 size - Exit with(3)
+20 Mar 2019 08:39:47,299 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=1
+20 Mar 2019 08:39:47,299 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,299 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@570974cf)
+20 Mar 2019 08:39:47,409 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:47,409 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=2
+20 Mar 2019 08:39:47,409 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,409 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@570974cf)
+20 Mar 2019 08:39:47,534 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:47,534 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 2=2
+20 Mar 2019 08:39:47,534 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,534 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@570974cf)
+20 Mar 2019 08:39:47,706 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:47,706 INFO  repository.InscriereRepository 22 <init> - Initializing InscriereRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:47,706 INFO  repository.ParticipantRepository 22 <init> - Initializing ParticipantRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:47,706 INFO  repository.ProbaRepository 24 <init> - Initializing ProbaRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:47,706 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=1, nume='Alex', varsta='22'} 
+20 Mar 2019 08:39:47,706 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,706 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:47,706 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:47,706 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:47,706 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:47,706 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:47,721 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@6233106d)
+20 Mar 2019 08:39:47,721 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:47,721 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:47,721 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=2, nume='Mihai', varsta='34'} 
+20 Mar 2019 08:39:47,721 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,721 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@6233106d)
+20 Mar 2019 08:39:47,721 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:47,721 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:47,721 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=1, distanta=dist50m, stil=liber} 
+20 Mar 2019 08:39:47,721 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,721 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:47,721 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:47,737 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:47,737 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:47,737 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:47,737 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@68f35ca2)
+20 Mar 2019 08:39:47,737 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:47,737 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:47,737 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=2, distanta=dist800m, stil=mixt} 
+20 Mar 2019 08:39:47,737 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,737 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@68f35ca2)
+20 Mar 2019 08:39:47,737 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:47,737 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:47,737 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=1} 
+20 Mar 2019 08:39:47,737 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:47,737 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:47,737 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:47,737 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:47,737 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:47,737 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:47,737 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7440e27f)
+20 Mar 2019 08:39:48,034 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:48,034 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=2} 
+20 Mar 2019 08:39:48,034 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:48,034 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7440e27f)
+20 Mar 2019 08:39:48,669 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:48,669 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=2, idProba=2} 
+20 Mar 2019 08:39:48,669 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:48,669 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7440e27f)
+20 Mar 2019 08:39:48,854 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:48,854 TRACE repository.InscriereRepository 29 size - Enter
+20 Mar 2019 08:39:48,854 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:48,870 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7440e27f)
+20 Mar 2019 08:39:48,870 TRACE repository.InscriereRepository 35 size - Exit with(3)
+20 Mar 2019 08:39:48,870 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=1
+20 Mar 2019 08:39:48,870 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:48,870 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7440e27f)
+20 Mar 2019 08:39:48,979 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:48,979 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=2
+20 Mar 2019 08:39:48,979 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:48,979 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7440e27f)
+20 Mar 2019 08:39:49,090 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:49,090 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 2=2
+20 Mar 2019 08:39:49,090 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,090 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7440e27f)
+20 Mar 2019 08:39:49,215 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:49,215 INFO  repository.InscriereRepository 22 <init> - Initializing InscriereRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:49,215 INFO  repository.ParticipantRepository 22 <init> - Initializing ParticipantRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:49,215 INFO  repository.ProbaRepository 24 <init> - Initializing ProbaRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+20 Mar 2019 08:39:49,215 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=1, nume='Alex', varsta='22'} 
+20 Mar 2019 08:39:49,215 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,215 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:49,215 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:49,215 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:49,215 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:49,215 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:49,231 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7458e55b)
+20 Mar 2019 08:39:49,231 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:49,231 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:49,231 TRACE repository.ParticipantRepository 52 save - Enter saving participant Participant{id=2, nume='Mihai', varsta='34'} 
+20 Mar 2019 08:39:49,231 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,231 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@7458e55b)
+20 Mar 2019 08:39:49,231 ERROR repository.ParticipantRepository 64 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Participanti.id)
+20 Mar 2019 08:39:49,231 TRACE repository.ParticipantRepository 68 save - Exit
+20 Mar 2019 08:39:49,231 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=1, distanta=dist50m, stil=liber} 
+20 Mar 2019 08:39:49,231 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,231 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:49,231 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:49,231 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:49,231 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:49,231 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:49,246 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@63ca13e)
+20 Mar 2019 08:39:49,246 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:49,246 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:49,246 TRACE repository.ProbaRepository 51 save - Enter saving 'proba' Proba{id=2, distanta=dist800m, stil=mixt} 
+20 Mar 2019 08:39:49,246 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,246 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@63ca13e)
+20 Mar 2019 08:39:49,246 ERROR repository.ProbaRepository 63 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: Probe.id)
+20 Mar 2019 08:39:49,246 TRACE repository.ProbaRepository 67 save - Exit
+20 Mar 2019 08:39:49,246 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=1} 
+20 Mar 2019 08:39:49,246 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,246 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+20 Mar 2019 08:39:49,246 INFO  repository.JdbcUtils 32 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\ConcursInot\ConcursInotTest.db
+20 Mar 2019 08:39:49,246 INFO  repository.JdbcUtils 33 getNewConnection - user: null
+20 Mar 2019 08:39:49,246 INFO  repository.JdbcUtils 34 getNewConnection - pass: null
+20 Mar 2019 08:39:49,246 INFO  repository.JdbcUtils 40 getNewConnection - Loaded driver ...org.sqlite.JDBC
+20 Mar 2019 08:39:49,246 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@759cf89c)
+20 Mar 2019 08:39:49,371 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:49,371 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=1, idProba=2} 
+20 Mar 2019 08:39:49,371 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,371 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@759cf89c)
+20 Mar 2019 08:39:49,577 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:49,577 TRACE repository.InscriereRepository 51 save - Enter saving 'inscrire' Inscriere{idParticipant=2, idProba=2} 
+20 Mar 2019 08:39:49,577 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,577 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@759cf89c)
+20 Mar 2019 08:39:49,717 TRACE repository.InscriereRepository 64 save - Exit
+20 Mar 2019 08:39:49,717 TRACE repository.InscriereRepository 172 findByProbaId - Enter
+20 Mar 2019 08:39:49,717 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,717 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@759cf89c)
+20 Mar 2019 08:39:49,717 TRACE repository.InscriereRepository 190 findByProbaId - Exit with([1, 2])
+20 Mar 2019 08:39:49,733 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=1
+20 Mar 2019 08:39:49,733 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,733 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@759cf89c)
+20 Mar 2019 08:39:49,844 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:49,844 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 1=2
+20 Mar 2019 08:39:49,844 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,844 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@759cf89c)
+20 Mar 2019 08:39:49,953 TRACE repository.InscriereRepository 81 delete - Exit
+20 Mar 2019 08:39:49,953 TRACE repository.InscriereRepository 69 delete - Enter deleting 'inscriere' with 2=2
+20 Mar 2019 08:39:49,953 TRACE repository.JdbcUtils 59 getConnection - Enter
+20 Mar 2019 08:39:49,953 TRACE repository.JdbcUtils 71 getConnection - Exit with(org.sqlite.SQLiteConnection@759cf89c)
+20 Mar 2019 08:39:50,078 TRACE repository.InscriereRepository 81 delete - Exit
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
