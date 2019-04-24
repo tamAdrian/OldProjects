@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #84D3F4;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+   <children>
+      <Button fx:id="backButton" layoutY="1.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
+      <TableView fx:id="tableView" layoutX="41.0" layoutY="53.0" prefHeight="418.0" prefWidth="430.0">
+        <columns>
+          <TableColumn fx:id="tableColumnDistanta" prefWidth="120.79997253417969" text="Distanta" />
+          <TableColumn fx:id="tableColumnStil" prefWidth="175.19994354248047" text="Stil" />
+            <TableColumn fx:id="tableColumnNumar" prefWidth="134.4000244140625" text="Numar" />
+        </columns>
+      </TableView>
+      <TextField fx:id="numeTextField" alignment="TOP_CENTER" layoutX="91.0" layoutY="494.0" prefHeight="26.0" prefWidth="308.0" promptText="Nume participant">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="varstaTextField" alignment="TOP_CENTER" layoutX="91.0" layoutY="542.0" prefHeight="26.0" prefWidth="308.0" promptText="Varsta participant">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="adaugaParticipantButton" layoutX="96.0" layoutY="595.0" mnemonicParsing="false" onAction="#handleAdaugaParticipant" prefHeight="26.0" prefWidth="298.0" text="Adauga participant">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="cautaParticipantiButton" layoutX="616.0" layoutY="481.0" mnemonicParsing="false" onAction="#handleCautaParticipanti" prefHeight="38.0" prefWidth="206.0" text="Cauta participantii probei">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Button>
+      <ListView fx:id="listView" layoutX="570.0" layoutY="53.0" prefHeight="418.0" prefWidth="298.0" />
+   </children>
+</AnchorPane>

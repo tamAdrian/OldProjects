@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class repository.PersoanaOficiuRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class repository.PersoanaOficiuRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/repository.html">repository</a> &gt; PersoanaOficiuRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.932s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">delete</td>
+<td class="success">0.521s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findAll</td>
+<td class="success">0.469s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findOne</td>
+<td class="success">1.269s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">save</td>
+<td class="success">0.686s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">size</td>
+<td class="success">0.444s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update</td>
+<td class="success">0.543s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>24 Apr 2019 09:55:59,587 INFO  repository.PersoanaOficiuRepository 22 &lt;init&gt; - Initializing PersoanaOficiuRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+24 Apr 2019 09:55:59,589 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user1', password='1463ca'} 
+24 Apr 2019 09:55:59,589 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:55:59,590 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+24 Apr 2019 09:55:59,590 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db
+24 Apr 2019 09:55:59,590 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+24 Apr 2019 09:55:59,591 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+24 Apr 2019 09:55:59,591 INFO  repository.JdbcUtils 38 getNewConnection - Loaded driver ...org.sqlite.JDBC
+24 Apr 2019 09:55:59,596 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@272fab8e)
+24 Apr 2019 09:55:59,705 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:55:59,705 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user2', password='76323dsac'} 
+24 Apr 2019 09:55:59,705 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:55:59,705 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@272fab8e)
+24 Apr 2019 09:55:59,815 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:55:59,815 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user3', password='14489cadsad'} 
+24 Apr 2019 09:55:59,815 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:55:59,815 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@272fab8e)
+24 Apr 2019 09:55:59,815 ERROR repository.PersoanaOficiuRepository 56 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+24 Apr 2019 09:55:59,815 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:55:59,815 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user1
+24 Apr 2019 09:55:59,815 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:55:59,815 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@272fab8e)
+24 Apr 2019 09:55:59,925 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:55:59,925 TRACE repository.PersoanaOficiuRepository 28 size - Enter
+24 Apr 2019 09:55:59,925 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:55:59,925 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@272fab8e)
+24 Apr 2019 09:55:59,925 TRACE repository.PersoanaOficiuRepository 34 size - Exit with(2)
+24 Apr 2019 09:55:59,925 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user2
+24 Apr 2019 09:55:59,925 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:55:59,925 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@272fab8e)
+24 Apr 2019 09:56:00,090 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:00,090 TRACE repository.PersoanaOficiuRepository 28 size - Enter
+24 Apr 2019 09:56:00,090 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:00,090 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@272fab8e)
+24 Apr 2019 09:56:00,090 TRACE repository.PersoanaOficiuRepository 34 size - Exit with(1)
+24 Apr 2019 09:56:00,090 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user1
+24 Apr 2019 09:56:00,090 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:00,090 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@272fab8e)
+24 Apr 2019 09:56:00,090 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:00,090 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user2
+24 Apr 2019 09:56:00,090 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:00,090 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@272fab8e)
+24 Apr 2019 09:56:00,106 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:00,106 INFO  repository.PersoanaOficiuRepository 22 &lt;init&gt; - Initializing PersoanaOficiuRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+24 Apr 2019 09:56:00,106 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user1', password='1463ca'} 
+24 Apr 2019 09:56:00,106 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:00,106 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+24 Apr 2019 09:56:00,106 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db
+24 Apr 2019 09:56:00,106 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+24 Apr 2019 09:56:00,106 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+24 Apr 2019 09:56:00,106 INFO  repository.JdbcUtils 38 getNewConnection - Loaded driver ...org.sqlite.JDBC
+24 Apr 2019 09:56:00,106 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@f1581d8)
+24 Apr 2019 09:56:00,232 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:00,232 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user2', password='76323dsac'} 
+24 Apr 2019 09:56:00,232 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:00,232 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@f1581d8)
+24 Apr 2019 09:56:00,341 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:00,341 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user3', password='14489cadsad'} 
+24 Apr 2019 09:56:00,341 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:00,341 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@f1581d8)
+24 Apr 2019 09:56:00,341 ERROR repository.PersoanaOficiuRepository 56 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+24 Apr 2019 09:56:00,341 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:00,341 TRACE repository.PersoanaOficiuRepository 128 findAll - Enter
+24 Apr 2019 09:56:00,341 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:00,341 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@f1581d8)
+24 Apr 2019 09:56:00,341 TRACE repository.PersoanaOficiuRepository 146 findAll - Exit with([PersoanaOficiu{id='user3', password='14489cadsad'}, PersoanaOficiu{id='user1', password='1463ca'}, PersoanaOficiu{id='user2', password='76323dsac'}])
+24 Apr 2019 09:56:00,341 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user1
+24 Apr 2019 09:56:00,341 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:00,341 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@f1581d8)
+24 Apr 2019 09:56:00,462 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:00,462 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user2
+24 Apr 2019 09:56:00,462 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:00,462 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@f1581d8)
+24 Apr 2019 09:56:00,572 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:00,572 INFO  repository.PersoanaOficiuRepository 22 &lt;init&gt; - Initializing PersoanaOficiuRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+24 Apr 2019 09:56:00,572 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user1', password='1463ca'} 
+24 Apr 2019 09:56:00,572 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:00,572 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+24 Apr 2019 09:56:00,572 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db
+24 Apr 2019 09:56:00,572 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+24 Apr 2019 09:56:00,572 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+24 Apr 2019 09:56:00,572 INFO  repository.JdbcUtils 38 getNewConnection - Loaded driver ...org.sqlite.JDBC
+24 Apr 2019 09:56:00,587 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@7a710739)
+24 Apr 2019 09:56:00,979 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:00,979 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user2', password='76323dsac'} 
+24 Apr 2019 09:56:00,979 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:00,979 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@7a710739)
+24 Apr 2019 09:56:01,624 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:01,624 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user3', password='14489cadsad'} 
+24 Apr 2019 09:56:01,624 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:01,624 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@7a710739)
+24 Apr 2019 09:56:01,624 ERROR repository.PersoanaOficiuRepository 56 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+24 Apr 2019 09:56:01,624 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:01,624 TRACE repository.PersoanaOficiuRepository 101 findOne - Enter finding 'persoanaOficiu' with id user1 
+24 Apr 2019 09:56:01,624 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:01,624 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@7a710739)
+24 Apr 2019 09:56:01,624 TRACE repository.PersoanaOficiuRepository 111 findOne - Exit with(PersoanaOficiu{id='user1', password='1463ca'})
+24 Apr 2019 09:56:01,624 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user1
+24 Apr 2019 09:56:01,624 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:01,624 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@7a710739)
+24 Apr 2019 09:56:01,718 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:01,718 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user2
+24 Apr 2019 09:56:01,718 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:01,718 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@7a710739)
+24 Apr 2019 09:56:01,829 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:01,844 INFO  repository.PersoanaOficiuRepository 22 &lt;init&gt; - Initializing PersoanaOficiuRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+24 Apr 2019 09:56:01,844 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user1', password='1463ca'} 
+24 Apr 2019 09:56:01,844 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:01,844 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+24 Apr 2019 09:56:01,844 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db
+24 Apr 2019 09:56:01,844 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+24 Apr 2019 09:56:01,844 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+24 Apr 2019 09:56:01,844 INFO  repository.JdbcUtils 38 getNewConnection - Loaded driver ...org.sqlite.JDBC
+24 Apr 2019 09:56:01,860 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@4e776d1e)
+24 Apr 2019 09:56:01,969 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:01,969 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user2', password='76323dsac'} 
+24 Apr 2019 09:56:01,969 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:01,969 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@4e776d1e)
+24 Apr 2019 09:56:02,063 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:02,063 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user3', password='14489cadsad'} 
+24 Apr 2019 09:56:02,063 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,063 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@4e776d1e)
+24 Apr 2019 09:56:02,063 ERROR repository.PersoanaOficiuRepository 56 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+24 Apr 2019 09:56:02,063 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:02,063 TRACE repository.PersoanaOficiuRepository 80 update - Enter updating 'persoanaOficiu' with user1
+24 Apr 2019 09:56:02,063 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,063 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@4e776d1e)
+24 Apr 2019 09:56:02,157 TRACE repository.PersoanaOficiuRepository 94 update - Exit
+24 Apr 2019 09:56:02,157 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user577
+24 Apr 2019 09:56:02,157 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,157 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@4e776d1e)
+24 Apr 2019 09:56:02,266 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:02,266 TRACE repository.PersoanaOficiuRepository 28 size - Enter
+24 Apr 2019 09:56:02,266 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,266 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@4e776d1e)
+24 Apr 2019 09:56:02,266 TRACE repository.PersoanaOficiuRepository 34 size - Exit with(2)
+24 Apr 2019 09:56:02,266 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user1
+24 Apr 2019 09:56:02,266 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,266 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@4e776d1e)
+24 Apr 2019 09:56:02,266 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:02,266 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user2
+24 Apr 2019 09:56:02,282 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,282 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@4e776d1e)
+24 Apr 2019 09:56:02,376 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:02,376 INFO  repository.PersoanaOficiuRepository 22 &lt;init&gt; - Initializing PersoanaOficiuRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+24 Apr 2019 09:56:02,376 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user1', password='1463ca'} 
+24 Apr 2019 09:56:02,376 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,376 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+24 Apr 2019 09:56:02,376 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db
+24 Apr 2019 09:56:02,376 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+24 Apr 2019 09:56:02,376 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+24 Apr 2019 09:56:02,391 INFO  repository.JdbcUtils 38 getNewConnection - Loaded driver ...org.sqlite.JDBC
+24 Apr 2019 09:56:02,391 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@2f808873)
+24 Apr 2019 09:56:02,495 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:02,495 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user2', password='76323dsac'} 
+24 Apr 2019 09:56:02,495 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,495 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@2f808873)
+24 Apr 2019 09:56:02,602 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:02,602 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user3', password='14489cadsad'} 
+24 Apr 2019 09:56:02,602 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,602 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@2f808873)
+24 Apr 2019 09:56:02,602 ERROR repository.PersoanaOficiuRepository 56 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+24 Apr 2019 09:56:02,602 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:02,602 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user4', password='wsasafa'} 
+24 Apr 2019 09:56:02,602 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,602 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@2f808873)
+24 Apr 2019 09:56:02,745 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:02,745 TRACE repository.PersoanaOficiuRepository 28 size - Enter
+24 Apr 2019 09:56:02,745 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,745 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@2f808873)
+24 Apr 2019 09:56:02,745 TRACE repository.PersoanaOficiuRepository 34 size - Exit with(4)
+24 Apr 2019 09:56:02,745 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user4
+24 Apr 2019 09:56:02,760 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,760 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@2f808873)
+24 Apr 2019 09:56:02,854 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:02,854 TRACE repository.PersoanaOficiuRepository 28 size - Enter
+24 Apr 2019 09:56:02,854 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,854 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@2f808873)
+24 Apr 2019 09:56:02,854 TRACE repository.PersoanaOficiuRepository 34 size - Exit with(3)
+24 Apr 2019 09:56:02,854 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user1
+24 Apr 2019 09:56:02,854 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,854 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@2f808873)
+24 Apr 2019 09:56:02,964 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:02,964 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user2
+24 Apr 2019 09:56:02,964 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:02,964 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@2f808873)
+24 Apr 2019 09:56:03,074 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:03,074 INFO  repository.PersoanaOficiuRepository 22 &lt;init&gt; - Initializing PersoanaOficiuRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+24 Apr 2019 09:56:03,074 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user1', password='1463ca'} 
+24 Apr 2019 09:56:03,074 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:03,074 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+24 Apr 2019 09:56:03,074 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Client)\ConcursInotTest.db
+24 Apr 2019 09:56:03,074 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+24 Apr 2019 09:56:03,074 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+24 Apr 2019 09:56:03,074 INFO  repository.JdbcUtils 38 getNewConnection - Loaded driver ...org.sqlite.JDBC
+24 Apr 2019 09:56:03,074 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@5bb45091)
+24 Apr 2019 09:56:03,183 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:03,183 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user2', password='76323dsac'} 
+24 Apr 2019 09:56:03,183 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:03,183 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@5bb45091)
+24 Apr 2019 09:56:03,293 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:03,293 TRACE repository.PersoanaOficiuRepository 47 save - Enter saving 'persoanaOficiu' PersoanaOficiu{id='user3', password='14489cadsad'} 
+24 Apr 2019 09:56:03,293 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:03,293 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@5bb45091)
+24 Apr 2019 09:56:03,293 ERROR repository.PersoanaOficiuRepository 56 save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+Error DB org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: PersoaneOficiu.id)
+24 Apr 2019 09:56:03,293 TRACE repository.PersoanaOficiuRepository 59 save - Exit
+24 Apr 2019 09:56:03,293 TRACE repository.PersoanaOficiuRepository 28 size - Enter
+24 Apr 2019 09:56:03,293 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:03,293 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@5bb45091)
+24 Apr 2019 09:56:03,293 TRACE repository.PersoanaOficiuRepository 34 size - Exit with(3)
+24 Apr 2019 09:56:03,293 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user1
+24 Apr 2019 09:56:03,293 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:03,293 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@5bb45091)
+24 Apr 2019 09:56:03,402 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+24 Apr 2019 09:56:03,402 TRACE repository.PersoanaOficiuRepository 64 delete - Enter deleting task with user2
+24 Apr 2019 09:56:03,402 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:03,402 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@5bb45091)
+24 Apr 2019 09:56:03,511 TRACE repository.PersoanaOficiuRepository 74 delete - Exit
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.10</a> at Apr 24, 2019 9:56:09 AM</p>
+</div>
+</div>
+</body>
+</html>

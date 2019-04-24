@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="service.ServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-04-24T06:56:47" hostname="Adrian-MSI" time="0.043">
+  <properties/>
+  <testcase name="numarParticipantiProbe" classname="service.ServiceTest" time="0.043"/>
+  <system-out><![CDATA[24 Apr 2019 09:56:47,921 INFO  repository.InscriereRepository 18 <init> - Initializing InscriereRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Server)\ConcursInot.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+24 Apr 2019 09:56:47,921 INFO  repository.ParticipantRepository 20 <init> - Initializing ParticipantRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Server)\ConcursInot.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+24 Apr 2019 09:56:47,921 INFO  repository.ProbaRepository 24 <init> - Initializing ProbaRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Server)\ConcursInot.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+24 Apr 2019 09:56:47,921 INFO  repository.PersoanaOficiuRepository 22 <init> - Initializing PersoanaOficiuRepository with properties: {bdConfig.jdbc.url=jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Server)\ConcursInot.db, bdConfig.jdbc.driver=org.sqlite.JDBC} 
+24 Apr 2019 09:56:47,921 TRACE repository.ProbaRepository 141 findAll - Enter
+24 Apr 2019 09:56:47,921 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:47,921 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+24 Apr 2019 09:56:47,921 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Server)\ConcursInot.db
+24 Apr 2019 09:56:47,921 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+24 Apr 2019 09:56:47,921 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+24 Apr 2019 09:56:47,921 INFO  repository.JdbcUtils 38 getNewConnection - Loaded driver ...org.sqlite.JDBC
+24 Apr 2019 09:56:47,952 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@416f2074)
+24 Apr 2019 09:56:47,952 TRACE repository.ProbaRepository 159 findAll - Exit with([Proba{id=1, distanta=dist50m, stil=fluture}, Proba{id=2, distanta=dist50m, stil=liber}, Proba{id=3, distanta=dist50m, stil=mixt}, Proba{id=4, distanta=dist50m, stil=spate}, Proba{id=5, distanta=dist200m, stil=fluture}, Proba{id=6, distanta=dist200m, stil=liber}, Proba{id=7, distanta=dist200m, stil=mixt}, Proba{id=8, distanta=dist200m, stil=spate}, Proba{id=9, distanta=dist800m, stil=fluture}, Proba{id=10, distanta=dist800m, stil=liber}, Proba{id=11, distanta=dist800m, stil=mixt}, Proba{id=12, distanta=dist800m, stil=spate}, Proba{id=13, distanta=dist1500m, stil=fluture}, Proba{id=14, distanta=dist1500m, stil=liber}, Proba{id=15, distanta=dist1500m, stil=mixt}, Proba{id=16, distanta=dist1500m, stil=spate}])
+24 Apr 2019 09:56:47,952 TRACE repository.InscriereRepository 219 groupByProbaId - Enter
+24 Apr 2019 09:56:47,952 TRACE repository.JdbcUtils 57 getConnection - Enter
+24 Apr 2019 09:56:47,952 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+24 Apr 2019 09:56:47,952 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Adrian\4. FACULTATE - ANUL II (Sem II)\MPP\Projects\Java\Laborator3(client-server)\ConcursInot(Server)\ConcursInot.db
+24 Apr 2019 09:56:47,952 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+24 Apr 2019 09:56:47,952 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+24 Apr 2019 09:56:47,952 INFO  repository.JdbcUtils 38 getNewConnection - Loaded driver ...org.sqlite.JDBC
+24 Apr 2019 09:56:47,952 TRACE repository.JdbcUtils 69 getConnection - Exit with(org.sqlite.SQLiteConnection@52d7f8f)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
